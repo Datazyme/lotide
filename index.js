@@ -21,21 +21,21 @@ const findKeyByValue = require('./findKeyByValue');
 
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  eqObjects: eqObjects,
-  assertEqual: assertEqual,
-  eqArrays: eqArrays,
-  flatten: flatten,
-  takeUntil: takeUntil,
-  without: without,
-  assertArraysEqual: assertArraysEqual,
-  countOnly: countOnly,
-  countLetters: countLetters,
-  findKey: findKey,
-  map: map,
-  assertObjectsEqual: assertObjectsEqual,
-  letterPositions: letterPositions,
-  findKeyByValue: findKeyByValue
+  head,
+  tail,
+  middle,
+  eqObjects,
+  assertEqual,
+  eqArrays,
+  flatten,
+  takeUntil,
+  without,
+  assertArraysEqual,
+  countOnly,
+  countLetters,
+  findKey,
+  map,
+  assertObjectsEqual,
+  letterPositions,
+  findKeyByValue
 };
