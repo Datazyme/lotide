@@ -1,23 +1,15 @@
+//function determines if two arrays are equal by size and values
 function eqArrays(array1, array2) {
+  //first separate out if statement for empty array
+  if (array1.length === 0 || array2.length === 0) {
+    return false;
+  }
   for (let i = 0; i < array1.length; i++) {
+    //compares each element of each array
     if (array1[i] !== array2[i]) {
       return false;
     }
   }
   return true;
 }
-module.exports = eqArrays;
-/*const assertEqual = function(eqArrays, expected) {
-  if (eqArrays === expected) {
-    console.log(`🍏 Assertion Passed: ${eqArrays} === ${expected}`);
-  } else {
-    console.log(`🍎 Assertion Failed: ${eqArrays} === ${expected}`);
-  }
-};*/
-
-//console.log(eqArrays([1, 2, 3,], [1, 2, 3])); // => should PASS
-//assertEqual(eqArrays([1, 2, 3,], [1, 2, 3]), true); // => true
-//assertEqual(eqArrays([1, 2, 3,], [3, 2, 1]), false); // => false
-
-//assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
-//assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
+module.exports = eqArrays
