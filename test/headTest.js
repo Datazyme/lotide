@@ -1,30 +1,27 @@
-const assertEqual = require('../assertEqual')
-const head = require('../head')
+//import assertEqual to get truthy statements
+const assertEqual = require('../assertEqual');
+const head = require('../head');
 const assert = (require('chai').assert);
-//const head = require('../head');
+
+//mocha gives describe and it functions, 
+//must be run with "npm test folder/filename" in terminal
 describe("#head", () => {
-  it("returns 1 for [1, 2, 3]", () => {
-    assert.strictEqual(head([1, 2, 3]), 1);
+  it("returns true for 1 and [1, 2, 3]", () => {
+    assert.strictEqual(assertEqual(head([1, 2, 3]), 1)), true;
   });
-  it("returns '5' for ['5']", () => {
-    assert.strictEqual(head(['5']), '5'); 
+  it("returns true for '5' and ['5']", () => {
+    assert.strictEqual(assertEqual(head(['5']), '5')), true; 
   });
   it("returns '5' for [5, 6, 7]", () => {
-    assert.strictEqual(head([5, 6, 7]), 5); 
+    assert.strictEqual(assertEqual(head([5, 6, 7]), 5)), true; 
   });
   it("returns 'Hello' for [Hello, Lighthouse, Labs]", () => {
-    assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); 
+    assert.strictEqual(assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello")), true; 
   });
-  it("returns error for [1, 6, 7] and 5", () => {
-    assert.strictEqual(head([1, 6, 7]), 5);
+  it("returns false for [1, 6, 7] and 5", () => {
+    assert.strictEqual(assertEqual(head([1, 6, 7]), 5)), false;
   });
-  it("returns error for [] and 5", () => {
-    assert.strictEqual(head([]), 5);
+  it("returns false for [] and 5", () => {
+    assert.strictEqual(assertEqual(head([]), 5)), false;
   });
 });
-
-/*assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([1,6,7]), 5);
-assertEqual(head([5]), 5);
-assertEqual(head([]), 5);*/
