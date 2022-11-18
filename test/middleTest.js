@@ -2,7 +2,9 @@
 const middle = require('../middle');
 const assert = (require('chai').assert);
 
-describe("#tail", () => {
+//mocha gives describe and it functions, 
+//must be run with "npm test folder/filename" in terminal
+describe("#middle", () => {
   it("returns empty array when length is one", () => {
     assert.deepEqual(middle([1]), []);
   });
@@ -16,13 +18,3 @@ describe("#tail", () => {
     assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]); 
   });
 });
-
-/*
-assertEqual(middle([1]), []) // => []
-assertEqual(middle([1, 2]), []) // => []
-assertEqual(middle([1, 2, 3]), "2")
-
-console.log(middle([1, 2, 3])) // => [2]
-console.log(middle([1, 2, 3, 4, 5])) // => [3]
-console.log(middle([1, 2, 3, 4])) // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]*/
