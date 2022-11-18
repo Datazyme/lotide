@@ -2,6 +2,8 @@
 const tail = require('../tail');
 const assert = (require('chai').assert);
 
+//mocha gives describe and it functions, 
+//must be run with "npm test folder/filename" in terminal
 describe("#tail", () => {
   it("returns Lighthouse Labs for Yo Yo, Lighthouse, Labs", () => {
     const words = ["Yo Yo", "Lighthouse", "Labs"];
@@ -15,11 +17,7 @@ describe("#tail", () => {
     const words = ["Lighthouse", "Labs"];
     assert.deepEqual(tail(["Yo Yo", "Lighthouse", "Labs"]), words); 
   });
+  it("returns an empty array if input array is empty", () => {
+    assert.deepEqual(tail([]), []); 
+  });
 });
-
-
-/*Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-assertEqual(tail(["Yo Yo", "Lighthouse", "Labs"]), words);*/
