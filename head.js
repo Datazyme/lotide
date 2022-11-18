@@ -1,14 +1,7 @@
-//const assertEqual = require('./assertEqual');
-
+//function takes in array and returns only the first value of an array
+//returned value is not within an array
 const head = function(actual) {
   let y = actual[0];
   return y;
 };
-
-/*Test code
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([1,6,7]), 5);
-assertEqual(head([5]), 5);
-assertEqual(head([]), 5);*/
 module.exports = head;
