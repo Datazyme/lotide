@@ -1,16 +1,10 @@
-
+//function returns a new array with everything but the first value of input array
 let tail = function(words) {
   let newWord = [];
+  //start loop at index 1
   for (let i = 1; i < words.length; i++) {
     newWord.push(words[i]);
   }
-  console.log(newWord);
   return newWord;
 };
-
-module.exports = tail
-/* Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-assertEqual(tail(["Yo Yo", "Lighthouse", "Labs"]), words);*/
+module.exports = tail;
