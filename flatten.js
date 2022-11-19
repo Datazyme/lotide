@@ -1,10 +1,9 @@
-function flatten(array1){
-  let fin = array1.flat(1);
-  console.log(Array.isArray(fin));
-  return fin;
-  
-}
-
-console.log(flatten([1, 2, [3, 4], 5, [6]]));
- // => [1, 2, 3, 4, 5, 6]
- console.log(flatten(["we", 2, [3, 4], 5, [6]]));
+//Takes nested array and removes the nested part. Makes a single array.
+let flatten = function (array1){
+  if (Array.isArray(array1) === true) {
+    let fin = array1.flat(1);
+    return fin;
+  }
+  return undefined;
+};
+module.exports = flatten;
