@@ -1,4 +1,4 @@
-
+//function takes in an array and an item to be removed from that array
 const without = function(fullArr, unwantedItem) {
   let cleanArr = [];
   for (const item of fullArr) {
@@ -8,6 +8,8 @@ const without = function(fullArr, unwantedItem) {
   }
   return cleanArr;
 };
+
+module.exports = without;
 
 console.log(without([1, 2, 3], [1])) // => [2, 3]
 console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
