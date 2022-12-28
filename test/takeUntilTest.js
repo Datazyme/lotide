@@ -10,7 +10,7 @@ describe("#takeUntil", () => {
     const results1 = takeUntil(data1, x => x < 0);
     assert.deepEqual(results1, [[1, 2, 5, 7, 2]]);
   });
-  it("returns original array length", () => {
+  it("returns everything before the comma", () => {
     const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
     const results2 = takeUntil(data2, x => x === ',');
     assert.deepEqual(results2, [["I've", "been", "to", "Hollywood"]]); 
