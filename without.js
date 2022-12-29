@@ -10,4 +10,4 @@ const without = function(fullArr, unwantedItem) {
   return cleanArr;
 };
 
-module.exports = without;;
+module.exports = without;
