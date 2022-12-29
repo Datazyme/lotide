@@ -1,3 +1,4 @@
+//function tests if arrays are equal
 function eqArrays(array1, array2) {
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
@@ -6,6 +7,8 @@ function eqArrays(array1, array2) {
   }
   return true;
 };
+
+//tests if the results of eqArrays are indeed equal
 const assertArraysEqual = function(eqArrays, expected) {
   if (eqArrays === expected) {
     console.log(`🍏 Assertion Passed: ${eqArrays} === ${expected}`);
