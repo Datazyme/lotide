@@ -1,11 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🍏 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🍎 Assertion Failed: ${actual} === ${expected}`);
-  }
-};
-
+//function to loop through sentence and return an object with letter keys and number of times as value
 let countLetters = function(letter) {
   let results = {};
   for (const i of letter) {
@@ -20,4 +13,4 @@ let countLetters = function(letter) {
   return results;
 };
 
-console.log(countLetters("lighthouse in the house"));
+module.exports = countLetters;
