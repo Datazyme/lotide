@@ -1,10 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return true;
-  } else {
-    return false;
-  }
-};
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
 const countOnly = function(allItems, itemsToCount) {
