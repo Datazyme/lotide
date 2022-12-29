@@ -4,25 +4,20 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 };
 
-let keys = Object.keys(bestTVShowsByGenre);
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🍏 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🍎 Assertion Failed: ${actual} === ${expected}`);
-  }
-};
-
-let findKeyByValue = function(key) {
-  for (genre in keys) {
-   if (keys[genre] === key) {
-      return genre;
-    } else {
-      return undefined;
+//finds genre of show in bestTVShowsByGenre object or any such object
+const findKeyByValue = function(obj, show) {
+  //create array of keys from object
+  let objKeys = Object.keys(obj);
+  //records index of objKeys
+  let index = 0;
+  //loops through elements in object and checks if it matches the submitted show, returns key by checking index in ObjKeys
+  for (let genre in obj) {
+    if (obj[genre] === show) {
+      return objKeys[index];
     }
+    index++;
   }
-};
+  return undefined;
+}
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+module.exports = findKeyByValue;
