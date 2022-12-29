@@ -1,6 +1,7 @@
 //function takes in an array and an item to be removed from that array
 const without = function(fullArr, unwantedItem) {
   let cleanArr = [];
+  //loops through array and checks if not unwantedItem and pushes it to cleanArr 
   for (const item of fullArr) {
     if (!unwantedItem.includes(item)) {
       cleanArr.push(item);
@@ -9,18 +10,4 @@ const without = function(fullArr, unwantedItem) {
   return cleanArr;
 };
 
-module.exports = without;
-
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-
-//const assertEqual = function(eqArrays, expected) {
-  //if (eqArrays === expected) {
-    //console.log(`🍏 Assertion Passed: ${eqArrays} === ${expected}`);
-  //} else {
-    //console.log(`🍎 Assertion Failed: ${eqArrays} === ${expected}`);
-  //}
-//};
+module.exports = without;;
