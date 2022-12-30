@@ -1,8 +1,8 @@
-//the assertArrayEqual test already tests if the arrays are equal so I cannot see any way to do yet 
-//another test if the equal arrays are equal
+//the eqArray test already tests if the arrays are equal so I cannot see any way to do yet 
+//another test to test if the equal arrays are equal
 const assertArraysEqual = require('../assertArraysEqual');
 const assert = (require('chai').assert);
-const eqArrays = require('../assertArraysEqual');
+const eqArrays = require('../eqArrays');
 
 //mocha gives describe and it functions, 
 //must be run with "npm test folder/filename" in terminal
@@ -11,7 +11,7 @@ describe("#eqArrays", () => {
     assert.deepEqual(eqArrays([1, 2, 3,], [1, 2, 3]), true);
   });
   it("returns false when arrays are not equal", () => {
-    assert.deepEqual(eqArrays([1, 2, 3,], [3, 2, 1]), false);; 
+    assert.deepEqual(eqArrays([1, 2, 3,], [3, 2, 1]), false);
   });
   it("returns true if values are equal strings", () => {
     assert.deepEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); 
@@ -26,6 +26,8 @@ describe("#eqArrays", () => {
     assert.deepEqual(eqArrays(["1", 2], []), false); 
   });
 });
+
+
 //Tests
 // assertEqual(eqArrays([1, 2, 3,], [1, 2, 3]), true); // => should PASS
 // assertEqual(eqArrays([1, 2, 3,], [1, 2, 3]), true); // => true
