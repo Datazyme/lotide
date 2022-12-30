@@ -15,7 +15,7 @@ describe("#countOnly", () => {
   it("returns expected undefined if the name does not appear in firstnames", () => {
     const firstNames = ["Karl", "Salima", "Agouhanna", "Fang", "Kavith", "Jason", "Salima", "Fang", "Joe"];
     const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-    assert.strictEqual(assertEqual(result1["Karima"], undefined));
+    assert.strictEqual(assertEqual(result1["Karima"], undefined), undefined);
   });
 
   it("returns the expected number of times the name appears in firstnames when more than once", () => {
