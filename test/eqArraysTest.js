@@ -10,7 +10,7 @@ describe("#eqArrays", () => {
     assert.deepEqual(eqArrays([1, 2, 3,], [1, 2, 3]), true);
   });
   it("returns false when arrays are not equal", () => {
-    assert.deepEqual(eqArrays([1, 2, 3,], [3, 2, 1]), false);; 
+    assert.deepEqual(eqArrays([1, 2, 3,], [3, 2, 1]), false);
   });
   it("returns true if values are equal strings", () => {
     assert.deepEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); 
