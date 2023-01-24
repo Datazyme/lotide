@@ -24,4 +24,7 @@ describe("#eqArrays", () => {
   it("returns false if one array is empty", () => {
     assert.deepEqual(eqArrays(["1", 2], []), false); 
   });
+  it("returns false if both arrays are empty", () => {
+    assert.deepEqual(eqArrays([], []), true); 
+  });
 });
