@@ -1,6 +1,5 @@
 //import the functions to test
 const countOnly = require('../countOnly');
-//const assertEqual = require('../assertEqual');
 const assert = (require('chai').assert);
 
 //mocha gives describe and it functions, 
