@@ -1,9 +1,3 @@
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
-
 //finds genre of show in bestTVShowsByGenre object or any such object
 const findKeyByValue = function(obj, show) {
   //create array of keys from object
