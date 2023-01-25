@@ -1,6 +1,5 @@
 //import the functions to test
 const findKeyByValue = require('../findKeyByValue');
-const assertEqual = require('../assertEqual');
 const assert = (require('chai').assert);
 
 //mocha gives describe and it functions, 
@@ -12,7 +11,7 @@ describe("#findKeyByValue", () => {
       comedy: "Brooklyn Nine-Nine",
       drama:  "The Wire"
     };
-    assert.strictEqual(assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"));
+    assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
   });
 
   it("returns undefined if the show is not in object", () => {
@@ -21,6 +20,6 @@ describe("#findKeyByValue", () => {
       comedy: "Brooklyn Nine-Nine",
       drama:  "The Wire"
     };
-    assert.strictEqual(assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined));
+    assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
   });
 });
