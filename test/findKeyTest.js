@@ -1,6 +1,5 @@
 //import the functions to test
 const findKey = require('../findKey');
-const assertEqual = require('../assertEqual');
 const assert = (require('chai').assert);
 
 //mocha gives describe and it functions, 
@@ -15,7 +14,7 @@ describe("#findKeyByValue", () => {
       "Ora":       { stars: 2 },
       "Akelarre":  { stars: 3 }
     }, x => x.stars === 2) 
-    assert.strictEqual(assertEqual(key, "noma"));
+    assert.strictEqual(key, "noma");
   });
 
   it("returns the key Blue Hill which is the first key in the object to have the object stars: 1", () => {
@@ -28,7 +27,7 @@ describe("#findKeyByValue", () => {
       "Akelarre":  { stars: 3 },
       "Andromeda": {stars: 15}
     }, x => x.stars === 1) 
-    assert.strictEqual(assertEqual(key, "Blue Hill"));
+    assert.strictEqual(key, "Blue Hill");
   });
 
   it("returns the key Akaleri which is the first key in the object to have the object stars: 15", () => {
@@ -41,7 +40,7 @@ describe("#findKeyByValue", () => {
       "Akelarre":  { stars: 3 },
       "Andromeda": {stars: 15}
     }, x => x.stars === 15) 
-    assert.strictEqual(assertEqual(key, "Andromeda"));
+    assert.strictEqual(key, "Andromeda");
   });
 
   it("returns undefined if callback does not have stars object value", () => {
@@ -54,7 +53,7 @@ describe("#findKeyByValue", () => {
       "Akelarre":  { stars: 3 },
       "Andromeda": {stars: 15}
     }, x => x.stars === 8) 
-    assert.strictEqual(assertEqual(key, undefined));
+    assert.strictEqual(key, undefined);
   });
 
 });
